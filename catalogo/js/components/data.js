@@ -1,9 +1,9 @@
 export const categories = [
     {
-        title: "Épicos",
+        title: "Clássicos",
         items: [
             {
-                img: "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg", top10: true, badge: "Clássico", badgeColor: "red", progress: 0,
+                img: "https://m.media-amazon.com/images/M/MV5BZGM2ZTRlNWEtZjhjNC00NGVjLWE5OTktYmRkNTdlNmVmMDEzXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_.jpg", top10: true, badge: "Clássico", badgeColor: "red", progress: 0,
                 youtube: "https://www.youtube.com/watch?v=bLvqoHBptjg"
             },
             {
