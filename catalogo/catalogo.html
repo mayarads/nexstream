@@ -103,7 +103,8 @@
     <script>
         const logo = document.getElementById('logo');
         if (logo) {
-            logo.src = '../assets/logo-nexstream-black.png';
+            const prefix = window.location.pathname.includes('/catalogo/') ? '../' : './';
+            logo.src = `${prefix}assets/logo-nexstream-black.png`;
         }
     </script>
 </body>
