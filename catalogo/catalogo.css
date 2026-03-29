@@ -4,6 +4,11 @@
     --text-color: #ffffff;
 }
 
+.site-logo {
+    width: 150px; /* Ou o tamanho que você definiu */
+    height: auto;
+}
+
 * {
     margin: 0;
     padding: 0;

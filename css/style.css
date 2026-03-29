@@ -24,6 +24,13 @@ ul, ol {
     margin: 0;
     padding: 0;
 }
+
+#logo {
+    width: 150px; /* Ou o tamanho que você preferir */
+    height: auto;
+    display: block;
+}
+
 /* Remove sublinhado de links dentro dos perfis */
 a.profile {
     text-decoration: none;
