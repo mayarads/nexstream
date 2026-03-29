@@ -63,5 +63,12 @@
             </section>
         </main>
         <script src="./js/index.js"></script>
+        <script>
+            const logo = document.getElementById('logo');
+            if (logo) {
+                const prefix = window.location.pathname.startsWith('/nexstream') ? '/nexstream/' : './';
+                logo.src = `${prefix}assets/logo-nexstream-black.png`;
+            }
+        </script>
     </body>
 </html>
