@@ -16,7 +16,9 @@
     <!-- Navbar -->
     <header class="navbar" id="navbar">
         <div class="navbar-left">
-            <img src="./assets/logo-nexstream-black.png" alt="logo" class="logo">
+            <a href="../index.html" class="logo-link" aria-label="NexStream">
+                <img src="../assets/logo-nexstream-black.png" alt="Logo NexStream" class="logo" id="logo">
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="https://www.alura.com.br/" class="active">Início</a></li>
@@ -78,7 +80,7 @@
     <script type="module" src="js/main.js"></script>
     <script>
         const savedProfileName = localStorage.getItem('activeProfileName');
-        const savedProfileImage = localStorage.getItem('activeProfileImage');
+        const savedProfileImage = normalizeProfileImagePath(localStorage.getItem('activeProfileImage'));
         const nameLink = document.querySelector('.kids-link');
         const profileIcon = document.querySelector('.profile-icon');
 
@@ -88,6 +90,20 @@
         if (profileIcon && savedProfileImage) {
             profileIcon.src = savedProfileImage;
             profileIcon.alt = `${savedProfileName || 'Perfil'} avatar`;
+        }
+
+        function normalizeProfileImagePath(value) {
+            if (!value) return value;
+            if (value.startsWith('./assets/') || value.startsWith('assets/')) {
+                return new URL('../' + value.replace(/^\.\//, ''), window.location.href).href;
+            }
+            return value;
+        }
+    </script>
+    <script>
+        const logo = document.getElementById('logo');
+        if (logo) {
+            logo.src = '../assets/logo-nexstream-black.png';
         }
     </script>
 </body>

@@ -35,15 +35,36 @@ function orderByProfile(categoriesList, profileName) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const nomePerfil = localStorage.getItem('activeProfileName') || localStorage.getItem('perfilAtivoNome');
-    const imagemPerfil = localStorage.getItem('activeProfileImage') || localStorage.getItem('perfilAtivoImagem');
+    const params = new URLSearchParams(window.location.search);
+    const queryName = params.get('name');
+    const queryImage = params.get('image');
 
-    if (nomePerfil && imagemPerfil) {
+    if (queryName && queryImage) {
+        localStorage.setItem('activeProfileName', queryName);
+        localStorage.setItem('activeProfileImage', queryImage);
+        history.replaceState({}, '', window.location.pathname);
+    }
+
+    const nomePerfil = queryName || localStorage.getItem('activeProfileName') || localStorage.getItem('perfilAtivoNome');
+    const imagemPerfil = normalizeProfileImagePath(queryImage || localStorage.getItem('activeProfileImage') || localStorage.getItem('perfilAtivoImagem'));
+
+    if (nomePerfil) {
         const kidsLink = document.querySelector('.kids-link');
         const profileIcon = document.querySelector('.profile-icon');
 
         if (kidsLink) kidsLink.textContent = nomePerfil;
-        if (profileIcon) profileIcon.src = imagemPerfil;
+        if (profileIcon) {
+            if (imagemPerfil) profileIcon.src = imagemPerfil;
+            profileIcon.alt = `${nomePerfil} avatar`;
+        }
+    }
+
+    function normalizeProfileImagePath(value) {
+        if (!value) return value;
+        if (value.startsWith('./assets/') || value.startsWith('assets/')) {
+            return new URL('../' + value.replace(/^\.\//, ''), window.location.href).href;
+        }
+        return value;
     }
 
     const container = document.getElementById('main-content');

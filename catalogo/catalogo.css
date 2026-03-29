@@ -1,6 +1,6 @@
 :root {
     --netflix-red: #E50914;
-    --dark-bg: #141414;
+    --dark-bg: #000000;
     --text-color: #ffffff;
 }
 
@@ -10,12 +10,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100vh;
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: var(--dark-bg);
     color: var(--text-color);
     overflow-x: hidden;
 }
+
 
 a {
     text-decoration: none;
@@ -49,7 +55,7 @@ a:hover {
 }
 
 .logo {
-    width: 92px;
+    width: 120px;
     margin-right: 25px;
     cursor: pointer;
 }
@@ -110,12 +116,12 @@ a:hover {
 
 /* Sliders */
 .sliders-container {
-    padding: 0 4%;
-    padding-top: 100px;
+    width: 100%;
+    padding: 100px 2% 100px;
+    min-height: calc(100vh - 70px);
     /* Space for navbar */
     position: relative;
     z-index: 3;
-    padding-bottom: 100px;
 }
 
 .slider-section {
@@ -154,14 +160,15 @@ a:hover {
 
 .movie-row {
     display: flex;
-    gap: 8px;
-    /* Small gap between movie cards */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(32px, 4vw, 56px);
+    /* Responsive gap between movie cards */
     overflow-x: visible;
     /* Let the expanded cards paint outside this box vertically */
-    padding: 10px 4% 50px 4%;
+    padding: 10px clamp(4vw, 24px, 64px) 50px clamp(4vw, 24px, 64px);
     /* Added bottom padding to hold the expanding modal */
-    margin: 0 -4%;
-    /* Pull edges back out so we don't double up padding from container */
+    margin: 0;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -172,9 +179,9 @@ a:hover {
 }
 
 .movie-card {
-    min-width: 250px;
-    width: 250px;
-    height: 140px;
+    min-width: 320px;
+    width: 320px;
+    height: 180px;
     background-color: #222;
     border-radius: 4px;
     cursor: pointer;
@@ -183,6 +190,38 @@ a:hover {
     z-index: 1;
     transform-origin: center center;
     /* Default origin */
+}
+
+@media (max-width: 900px) {
+    .movie-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .movie-card:first-child {
+        width: min(90vw, 500px);
+        min-width: 0;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .movie-card:nth-child(n+2) {
+        width: min(44vw, 220px);
+        min-width: 0;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-card:first-child {
+        width: min(96vw, 420px);
+    }
+    .movie-card:nth-child(n+2) {
+        display: none;
+    }
 }
 
 /* Modifiers applied by JavaScript to prevent edge clipping */

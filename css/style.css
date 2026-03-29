@@ -39,7 +39,7 @@ a.profile:hover, a.profile:focus {
     text-decoration: none;
 }
  body {
-             background: black;
+             background: #000000;
              color: white;
              font-family: 'montserrat', sans-serif;
              font-size: bold;
@@ -91,12 +91,26 @@ img:hover {
 
 /* Posiciona o header fixo no canto superior esquerdo */
 header {
-            background: var(--img-bg); 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--img-bg);
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem;
 }
+
+section[aria-label="Perfis Disponíveis"] {
+    margin-top: 3.5rem;
+}
+
+.site-logo {
+    width: 120px;
+    height: 52px;
+    max-width: 220px;
+} 
 
 /* Theme variables (default: dark) */
 :root {
@@ -106,56 +120,18 @@ header {
     --accent: #6c29b8;
 }
 
-/* Light theme */
-html.light {
-    --bg: #ffffff;
-    --text: #000;
-    --img-bg: transparent;
-}
-
 body {
     background: var(--bg);
     color: var(--text);
 }
 
-/* Theme toggle button */
-#theme-toggle {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: transparent;
-    color: var(--text);
-    border: 1px solid rgba(255,255,255,0.12);
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-#theme-toggle:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-/* Ícones dentro do botão */
+/* Ícones dentro de elementos genéricos */
 .icon {
     display: inline-block;
     vertical-align: middle;
     width: 1.25rem;
     height: 1.25rem;
     fill: currentColor;
-}
-
-/* Mostrar lua por padrão (tema escuro), mostrar sol no tema claro */
-.icon-sun { display: none; }
-.icon-moon { display: inline-block; }
-html.light .icon-sun { display: inline-block; }
-html.light .icon-moon { display: none; }
-
-/* Acessibilidade: foco visível */
-#theme-toggle:focus {
-    outline: 3px solid rgba(108,41,184,0.18);
-    outline-offset: 2px;
 }
             
 h1 {
