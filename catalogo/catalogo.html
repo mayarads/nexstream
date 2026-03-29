@@ -76,6 +76,20 @@
     </footer>
 
     <script type="module" src="js/main.js"></script>
+    <script>
+        const savedProfileName = localStorage.getItem('activeProfileName');
+        const savedProfileImage = localStorage.getItem('activeProfileImage');
+        const nameLink = document.querySelector('.kids-link');
+        const profileIcon = document.querySelector('.profile-icon');
+
+        if (nameLink && savedProfileName) {
+            nameLink.textContent = savedProfileName;
+        }
+        if (profileIcon && savedProfileImage) {
+            profileIcon.src = savedProfileImage;
+            profileIcon.alt = `${savedProfileName || 'Perfil'} avatar`;
+        }
+    </script>
 </body>
 
 </html>
