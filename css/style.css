@@ -25,10 +25,12 @@ ul, ol {
     padding: 0;
 }
 
-#logo {
-    width: 150px; /* Ou o tamanho que você preferir */
-    height: auto;
-    display: block;
+/* Isso garante que a logo tenha um tamanho visível */
+.site-logo, #logo {
+    width: 160px !important; /* Ajuste o tamanho como preferir */
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
 }
 
 /* Remove sublinhado de links dentro dos perfis */

@@ -4,9 +4,12 @@
     --text-color: #ffffff;
 }
 
-.site-logo {
-    width: 150px; /* Ou o tamanho que você definiu */
-    height: auto;
+/* Isso garante que a logo tenha um tamanho visível */
+.site-logo, #logo {
+    width: 160px !important; /* Ajuste o tamanho como preferir */
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
 }
 
 * {
