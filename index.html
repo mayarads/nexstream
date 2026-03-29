@@ -4,16 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" href="favico-n-roxo.ico">
 
         <title>NexStream</title>
     </head>
     <body>
         <main>
-            
             <header>
-                <img id="logo" src="/assets/Logo-NexStream-black.png" alt="Logo do NexStream">
+                <img id="logo" src="./assets/Logo-NexStream-black.png" alt="Logo do NexStream">
                 <button id="theme-toggle" aria-label="Alternar tema" title="Alternar tema" aria-pressed="false">
                     <!-- Ícone lua (visível no tema escuro) -->
                     <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
@@ -26,15 +25,15 @@
                 </button>
             </header>
             
-            
             <h1>Quem está assistindo?</h1>
             
             <section aria-label="Perfis Disponíveis">
+            <nav class="profiles">   
                 <ul class="profiles-outer">
                     <li>
                         <ul class="profiles" aria-label="Lista de perfis">
                             <li>
-                                <a href="#" class="profile">
+                                <a href="catalogo/catalogo.html" class="profile">
                                     <figure>
                                         <img src="/assets/perfil-1.jpg" alt="Uma personagem do jogo de video game Donkey Kong Country 2.">
                                         <figcaption>Dixie</figcaption>
@@ -42,23 +41,23 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="profile">
+                                <a href="catalogo/catalogo.html" class="profile">
                                     <figure>
-                                        <img src="/assets/perfil-2.png" alt="Uma caricatura bem-humorada de um empresário careca e de barba cheia em seu escritório, usando óculos e terno azul, sorrindo e digitando em um laptop cercado por gráficos financeiros e uma xícara de café.">
+                                        <img src="/assets/perfil-2.png" alt="Uma caricatura bem-humorada de um empresário careca e de barba cheia em seu escritório, usando óculos e terno azul.">
                                         <figcaption>João</figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="profile">
+                                <a href="catalogo/catalogo.html" class="profile">
                                     <figure>
-                                        <img src="/assets/perfil-3.png" alt="Ilustração vibrante de uma streamer ruiva sorridente em seu setup gamer, segurando um controle de videogame ao lado de um gato adormecido e baldes de pipoca.">
+                                        <img src="/assets/perfil-3.png" alt="Ilustração vibrante de uma streamer ruiva sorridente em seu setup gamer, segurando um controle de videogame ao lado de um gatinho.">
                                         <figcaption>May</figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="profile">
+                                <a href="catalogo/catalogo.html" class="profile">
                                     <figure>
                                         <img src="/assets/perfil-4.jpg" alt="Um personagem do jogo de video Super Mario World.">
                                         <figcaption>Mario</figcaption>
@@ -68,8 +67,9 @@
                         </ul>
                     </li>
                 </ul>
+            </nav> 
             </section>
         </main>
-        <script src="/index.js"></script>
+        <script src="./js/index.js"></script>
     </body>
 </html>

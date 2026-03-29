@@ -6,10 +6,10 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "inter";
-    src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
-    font-weight: 400;
-    font-style: bold;
+    font-family: "montserrat";
+    src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400 700;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -41,7 +41,7 @@ a.profile:hover, a.profile:focus {
  body {
              background: black;
              color: white;
-             font-family: 'inter', sans-serif;
+             font-family: 'montserrat', sans-serif;
              font-size: bold;
              margin: 0;
              min-height: 100vh;
@@ -80,7 +80,7 @@ img:hover {
 }
 
     figcaption {
-    font-family: 'inter', sans-serif;
+    font-family: 'montserrat', sans-serif;
     font-size: 1.1rem; 
     font-weight: 500; 
     margin-top: 0.5rem; 
