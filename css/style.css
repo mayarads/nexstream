@@ -26,11 +26,14 @@ ul, ol {
 }
 
 /* Isso garante que a logo tenha um tamanho visível */
-.site-logo, #logo {
-    width: 160px !important; /* Ajuste o tamanho como preferir */
-    height: auto !important;
+#logo, .site-logo {
     display: block !important;
     visibility: visible !important;
+    opacity: 1 !important;
+    width: 160px !important; 
+    height: auto !important;
+    position: relative !important; /* Necessário para o z-index funcionar */
+    z-index: 9999 !important;      /* Joga para a frente de tudo */
 }
 
 /* Remove sublinhado de links dentro dos perfis */

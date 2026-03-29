@@ -27,5 +27,3 @@ profileLinks.forEach(link => {
 });
 
 // Exemplo de como deve estar no JS:
-const logo = document.getElementById('logo');
-logo.src = 'logo-final.png'; // Caminho correto para o arquivo na raiz
