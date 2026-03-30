@@ -1,3 +1,20 @@
+.catalogo {
+    padding: 2rem;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card-filme img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
 :root {
     --netflix-red: #E50914;
     --dark-bg: #000000;
@@ -5,14 +22,25 @@
 }
 
 /* Isso garante que a logo tenha um tamanho visível */
-#logo, .site-logo {
+#logo, .site-logo,
+header.navbar .logo-link img {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    width: 160px !important; 
+    width: auto !important;
+    max-height: 40px !important;
     height: auto !important;
+    object-fit: contain !important;
     position: relative !important; /* Necessário para o z-index funcionar */
     z-index: 9999 !important;      /* Joga para a frente de tudo */
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    padding: 0;
 }
 
 * {
@@ -24,6 +52,7 @@
 html, body {
     min-height: 100vh;
     height: 100%;
+    background-color: #000000;
 }
 
 body {
@@ -48,14 +77,22 @@ a:hover {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4%;
+    padding: 0 16px;
     height: 70px;
     z-index: 1000;
     background-color: var(--dark-bg);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .navbar-left,

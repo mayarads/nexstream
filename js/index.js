@@ -26,4 +26,4 @@ profileLinks.forEach(link => {
 	});
 });
 
-// Exemplo de como deve estar no JS:
+

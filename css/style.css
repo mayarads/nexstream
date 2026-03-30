@@ -26,15 +26,13 @@ ul, ol {
 }
 
 /* Isso garante que a logo tenha um tamanho visível */
-#logo, .site-logo {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 160px !important; 
-    height: auto !important;
-    position: relative !important; /* Necessário para o z-index funcionar */
-    z-index: 9999 !important;      /* Joga para a frente de tudo */
+
+.site-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
+
 
 /* Remove sublinhado de links dentro dos perfis */
 a.profile {
@@ -108,21 +106,22 @@ header {
     align-items: center;
     justify-content: flex-start;
     background: var(--img-bg);
-    top: 0;
-    left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
+    min-height: 60px;
+    gap: 2rem;
 }
+
 
 section[aria-label="Perfis Disponíveis"] {
     margin-top: 3.5rem;
 }
 
 .site-logo {
-    width: 120px;
-    height: 52px;
-    max-width: 220px;
-} 
+    height: 35px;
+    width: auto;
+    display: block;
+}
 
 /* Theme variables (default: dark) */
 :root {
