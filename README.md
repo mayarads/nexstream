@@ -33,3 +33,9 @@ Você pode acessar o projeto rodando ao vivo aqui:
 
 ---
 Desenvolvido com 💜 por [Mayara](https://github.com/mayarads)
+
+## 📬 Contato
+
+Gostou do projeto? Vamos nos conectar!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mfernnandes/)
